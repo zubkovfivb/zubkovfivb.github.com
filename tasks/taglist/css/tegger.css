@@ -1,0 +1,67 @@
+.container-tegger{
+    position: relative;
+    margin: auto;
+    width: 500px;
+    height: auto;
+}
+
+.widget{
+    width: 100%;
+    background-color: #c7fcec;
+    padding: 10px;
+        
+}
+.taglist{
+    background-color: white;
+    height: 30px;
+    width: 100%;  
+}
+
+.tag{
+    cursor: default;
+    height: 20px;
+    margin: 5px;
+    float: left;
+    background-color: #00cccc;
+}
+
+.buttons{
+    height: 50px;
+    width: 100%;  
+}
+
+.inputField{
+    width: 100%;    
+}
+
+.inputText{
+    width: 75%;
+}
+
+.btnView{
+    cursor: pointer;
+    height: 80%;
+    width: 100%;    
+}
+
+.btnEdit{
+    cursor: pointer;
+    display: block;
+    height: 80%;
+    width: 100%; 
+}
+
+.buttonAdd{
+    cursor: pointer;
+    width: 20%;  
+}
+
+.tagDel{
+    background-color: silver;
+    cursor: pointer;
+    float: right;
+    font-size: 14px;
+    height: 100%;
+    text-align: center;
+    width: 30px;   
+}

@@ -1,0 +1,80 @@
+.alert {
+	margin-top: 5px;
+}
+
+.control-label{
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 5px;			
+}
+
+.form-control{
+	background-color: #FFFFFF;
+    background-image: none;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    color: #555555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    vertical-align: middle;
+    width: 50%;
+}
+.form-control:focus{
+	border-color:#66afe9;
+	outline:0;
+	-webkit-box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6);
+	box-shadow:inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(102,175,233,0.6)
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+.alert-danger {
+    background-color: #F2DEDE;
+    border-color: #EBCCD1;
+    color: #A94442;
+    display: none;
+}
+.alert {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.btn-primary.disabled{
+	background-color: #428BCA;
+    border-color: #357EBD;
+}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.65;
+    pointer-events: none;
+}
+.btn-primary {
+    background-color: #428BCA;
+    border-color: #357EBD;
+    color: #FFFFFF;
+}
+.btn {
+    -moz-user-select: none;
+    background-image: none;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
