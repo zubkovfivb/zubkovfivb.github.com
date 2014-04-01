@@ -129,6 +129,7 @@
     z-index: 1;
 }
 .tabsContainer{
+    display: -moz-inline-box;
     background-color: #F9F9F9;
     margin: 0;
     padding: 10px 10px 0;}
