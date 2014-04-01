@@ -222,7 +222,7 @@ function show(element){
         
             for(var j = 0; j < element.length; j++){
                 element[j][0].style.display = 'block'; 
-                widthTabsContainer += 200;
+                widthTabsContainer += element[j][0].clientWidth;
             }
        
             show(element[0][0]);
