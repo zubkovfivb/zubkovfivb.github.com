@@ -1,0 +1,2 @@
+﻿Implementation of the registration form validation; common form; using bootstrap, regExp, compare email with static list of email;
+feature in the delay validation

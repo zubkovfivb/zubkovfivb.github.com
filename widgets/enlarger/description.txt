@@ -1,0 +1,7 @@
+﻿Implementation of the LightBox
+The page is scrollable; images in the middle of the screen; with using overlay.
+
+Control:
+    esc - closes the image
+    click on the picture - opens a larger version
+    click on the cross - closes the picture.

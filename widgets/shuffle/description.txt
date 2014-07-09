@@ -1,0 +1,8 @@
+﻿Implementation of gallery, based on the matrix in which the pictures correspond to the size of 1x1, 2x2, 1x2, 2x1; they fill the given space, leaving no gaps.
+
+Control:
+	shuffle - Shuffle pictures
+	other buttons - show pictures in the selected category
+	click on the picture - opens a larger version
+    esc - close the image
+    click on the overlay - closes image

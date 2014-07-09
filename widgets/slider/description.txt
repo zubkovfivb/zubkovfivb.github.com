@@ -1,0 +1,1 @@
+﻿Simple slider with animated transitions; implemented using js; pictures predetermined size; the delay between shots - 2 seconds; when you click on the button, slider pauses for 5 seconds.
