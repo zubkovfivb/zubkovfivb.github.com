@@ -50,8 +50,12 @@
     margin-bottom: -40px;
 }
 
+.todo-check-all,
 .todo-check{
     cursor: pointer;
+}
+
+.todo-check{
     margin-top: -9px;
     position: absolute;
     top: 50%;  

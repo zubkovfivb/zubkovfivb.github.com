@@ -492,10 +492,10 @@ var settings = {
 
                 bigImg.attr("src", $(event.target).attr("src").replace("small","large") );
                 hider.css("display", "block");
-                container.css("display", "block");
-
+                
                 bigImg.ready(function(){
                     resizer();
+                    container.css("display", "block");
                 });
             }
         });

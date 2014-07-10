@@ -9,13 +9,12 @@ firstAppControllers.controller("FirstCtrl", function($scope, $http) {
     $scope.infoText =
         "<div class='info-me'>" +
             "<h3>About me</h3>"+
-            "<p>My experience in develop- about 1 year, my job is to fix bugs and add new features to existing functionality. I'm not very good in html and css, but and not very bad . I like JS with his libraries and frameworks. </p>" +
+            "<p>I have experience in develop about 1 year. I like JS with his libraries and frameworks. It's very interesting build some logic and develop an algorithm to implement WEB applications. My knowledge allow to realize various cross-browser projects. Now my job is to fix bugs and add new features to existing functionality. I'm looking for a job where I will constantly explore new technologies and work in a team.</p>" +
             "<p><b>Main skills:</b> html, css, javascript, JQuery, entry level nodeJS, entry level AngularJS;</p>" +
             "<p><b>Other:</b> java(core, servlet, ant, jsp, hibernate), php, xml, sql;</p>" +
             "<p><b>Ide:</b> webstorm, sublime, eclipse, netbeans, notepad++, phpdesigner;</p>" +
             "<p><b>English:</b> pre - intermediate;</p>" +
         "</div>";
-// my skills: html, css, JavaScript, JQuery, entry level nodeJS, entry level AngularJS; you may see, my works and more info in my portfolio - http://zubkovfivb.github.io
 
 // get widget list from json data
     $http.get('model/data.json').success(function(data) {

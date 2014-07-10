@@ -39,10 +39,11 @@ function makeZoomable(node){
             
             hider.css("display", "block");
 
-            container.css("display", "block");
+            
             close.css("top", bigImg[0].offsetTop);
             bigImg.ready(function(){
                 resizer();    
+                container.css("display", "block");
             });
         }
     });

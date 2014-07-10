@@ -45,3 +45,11 @@
     top: 0;
     cursor: pointer;
 }
+
+img{
+    cursor: pointer;
+}
+
+.bigImg-enlarger{
+    cursor: context-menu;
+}

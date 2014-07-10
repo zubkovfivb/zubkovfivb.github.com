@@ -5,7 +5,7 @@ Control:
 		Clear X completed items - delete all selected records 
 	text field:
 		enter - add record 
-	record: 
+	note: 
 		check box - mark
 		cross - delete 
 		double click - edit 
