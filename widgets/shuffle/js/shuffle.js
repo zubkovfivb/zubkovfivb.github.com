@@ -495,7 +495,7 @@ var settings = {
                 
                 bigImg.ready(function(){
                     resizer();
-                    container.css("display", "block");
+                    container.css("display", "block"); 
                 });
             }
         });

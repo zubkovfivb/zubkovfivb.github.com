@@ -43,7 +43,7 @@ function makeZoomable(node){
             close.css("top", bigImg[0].offsetTop);
             bigImg.ready(function(){
                 resizer();    
-                container.css("display", "block");
+                container.css("display", "block"); 
             });
         }
     });
