@@ -458,6 +458,7 @@ var settings = {
         var hider = $('.hider-zoomer');
         var container = $('.container2-zoomer');
         var bigImg = $('.bigImg-zoomer');
+        var loader = $('.loader-img');
 
         function closeImge(){
             bigImg.attr('src','');
@@ -492,11 +493,15 @@ var settings = {
 
                 bigImg.attr("src", $(event.target).attr("src").replace("small","large") );
                 hider.css("display", "block");
-                
-                bigImg.ready(function(){
-                    resizer();
-                    container.css("display", "block"); 
-                });
+                container.css("display", "block");
+                bigImg.css("display", "none");
+                loader.css("display", "block");
+
+                bigImg[0].onload = function(){
+                        resizer();
+                        bigImg.css("display", "block");
+                        loader.css("display", "none");
+                };
             }
         });
     }

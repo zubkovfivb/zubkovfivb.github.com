@@ -5,6 +5,7 @@ function makeZoomable(node){
     var container = $('.container2-enlarger');
     var close = $('.close-enlarger');
     var bigImg = $('.bigImg-enlarger');
+    var loader = $('.loader-img');
 
     function closeImge(){
         bigImg.attr('src','');
@@ -36,15 +37,19 @@ function makeZoomable(node){
         if(event.target.nodeName === 'IMG'){
 
             bigImg.attr("src", $(event.target).attr("src").replace("small","large") );
-            
             hider.css("display", "block");
-
-            
+            container.css("display", "block");
+            bigImg.css("display", "none");
+            loader.css("display", "block");
+            close.css("display", "none");
             close.css("top", bigImg[0].offsetTop);
-            bigImg.ready(function(){
-                resizer();    
-                container.css("display", "block"); 
-            });
+
+            bigImg[0].onload = function(){
+                resizer();
+                loader.css("display", "none");
+                close.css("display", "block");
+                bigImg.css("display", "block"); 
+            };
         }
     });
 
