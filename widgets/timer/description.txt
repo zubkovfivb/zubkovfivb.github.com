@@ -1,6 +1,0 @@
-﻿Implementation of the timer; with the possibility of timestamps; feature of this widget is measured and that milliseconds, time accuracy is always ok
-
-control(if timer active):
-    s - start / stop
-    r - reset
-    l - mark circle
