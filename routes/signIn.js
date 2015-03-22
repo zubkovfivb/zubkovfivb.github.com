@@ -10,7 +10,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
 
-    var user1 = new user({name: req.body.name, password: req.body.password});
+    var user1 = new user({login: req.body.login, password: req.body.password});
 
     user1.save(function(err){
         if(err){

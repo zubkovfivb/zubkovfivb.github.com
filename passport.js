@@ -5,12 +5,12 @@ var passport = require('passport'),
 //### strategy for login
 passport.use(new LocalStrategy(
     {
-        usernameField: 'name',
+        usernameField: 'login',
         passwordField: 'password'
     },
     function(username, password, done) {
 
-        user.findOne({ name: username }, function(err, user) {
+        user.findOne({ login: username }, function(err, user) {
 
             if (err) { return done(err); }
             if (!user) {
