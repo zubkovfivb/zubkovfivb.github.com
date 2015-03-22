@@ -4,11 +4,19 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
-var db = require('./database/init');
-var routes = require('./routes/index');
-var users = require('./routes/users');
-var user = require('./models/user');
+var dep = {
+    db: require('./database/init'),
+    passport: require('./passport')
+};
+
+var routes = {
+    index: require('./routes/index'),
+    userList: require('./routes/users'),
+    login: require('./routes/login'),
+    signIn: require('./routes/signIn')
+};
 
 var app = express();
 
@@ -16,16 +24,25 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-// uncomment after placing your favicon in /public
 app.use(favicon(__dirname + '/public/favic/index.ico'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+    secret: "santaCat",
+    proxy: true,
+    resave: true,
+    saveUninitialized: true
+}));
+app.use(dep.passport.initialize());
+app.use(dep.passport.session());
 
-app.use('/', routes);
-app.use('/users', users);
+app.use('/', routes.index);
+app.use('/users', routes.userList);
+app.use('/login', routes.login);
+app.use('/signin', routes.signIn);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
