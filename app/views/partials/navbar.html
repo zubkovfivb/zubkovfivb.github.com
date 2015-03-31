@@ -1,0 +1,25 @@
+<nav class="navbar navbar-fixed-top " ng-controller="NavbarCtrl">
+    <div class="container-fluid nav-container">
+        <div class="navbar-header">
+            <a class="brand" href="#">
+                <img alt="Brand" src="image/imagestest.jpg">
+            </a>
+        </div>
+
+        <ul class="nav navbar-nav">
+            <li ng-repeat="item in menu" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+                <a href="/{{item.link}}">{{item.title}}</a>
+            </li>
+            <li ng-repeat="item in authMenu" ng-show="currentUser" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+                <a href="/{{item.link}}">{{item.title}}</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav pull-right">
+            <li ng-if="!currentUser"><a href="/signup">Sign up</a></li>
+            <li ng-if="!currentUser"><a href="/login">Log In</a></li>
+            <li ng-if="currentUser"><a ng-click="logout()"><span class="glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+
