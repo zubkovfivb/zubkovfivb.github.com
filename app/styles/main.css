@@ -1,3 +1,10 @@
+body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
 .signup-well {
     padding: 19px;
     margin-bottom: 20px;
@@ -91,32 +98,6 @@
 
 }
 
-/*.navbar {*/
-    /*position: fixed;*/
-    /*background-color: #0000ff;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*height: 100%;*/
-    /*width: 50px;*/
-    /*overflow: hidden;*/
-/*}*/
-
-/*.navbar a {*/
-    /*color: white;*/
-    /*text-decoration: none;*/
-/*}*/
-/*.navbar ul {*/
-    /*color: white;*/
-    /*padding: 0;*/
-    /*margin: 0;*/
-/*}*/
-/*.navbar li {*/
-    /*list-style: none;*/
-    /*padding: 0;*/
-    /*margin: 0;*/
-    /*border-bottom: 1px solid;*/
-/*}*/
-
 .form-signin {
     box-shadow: 0 0 2px 1px #bfbfbf;
     border: 1px solid #bfbfbf;
@@ -138,4 +119,17 @@
     -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.sidebar-holder{
+    padding: 10px;
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: 50px;
+    margin: -15px;
 }

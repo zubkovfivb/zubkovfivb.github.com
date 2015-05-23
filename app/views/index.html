@@ -15,7 +15,7 @@
         <!-- build:css(.tmp) styles/main.css -->
 
       <link rel="stylesheet" href="styles/main.css">
-      <link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap.min.css">
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
         <!-- endbuild -->
 </head>
   <body ng-app="angularPassportApp">
@@ -29,8 +29,23 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div ng-include="" src="'partials/navbar.html'"></div>
-    <div class="container-fluid" ng-view=""></div>
+    <header class="navbar navbar-default navbar-static-top"
+            role="banner"
+            ng-include=""
+            src="'partials/layouts/navbar.html'">
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"
+                 id="leftCol"
+                 ng-include=""
+                 src="'partials/layouts/sidebar.html'">
+            </div>
+            <div class="col-md-9"
+                 ng-view="">
+            </div>
+        </div>
+    </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
