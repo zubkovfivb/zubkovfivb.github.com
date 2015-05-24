@@ -11,18 +11,30 @@
         </a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
-        <ul class="nav navbar-nav">
-            <li ng-repeat="item in menu" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-                <a href="/{{item.link}}">{{item.title}}</a>
-            </li>
-            <li ng-repeat="item in authMenu" ng-show="currentUser" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-                <a href="/{{item.link}}">{{item.title}}</a>
-            </li>
-        </ul>
-        <ul class="nav navbar-nav pull-right">
-            <li ng-if="!currentUser"><a href="/signup">Sign up</a></li>
-            <li ng-if="!currentUser"><a href="/login">Log In</a></li>
-            <li ng-if="currentUser"><a ng-click="logout()"><span class="glyphicon-log-out"></span> Logout</a></li>
-        </ul>
+        <div ng-if="currentUser">
+            <ul class="nav navbar-nav">
+                <li ng-repeat="item in authMenu" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+                    <a href="/{{item.link}}">{{item.title}}</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li>
+                    <a ng-click="logout()"><span class="glyphicon-log-out"></span> Logout</a>
+                </li>
+            </ul>
+        </div>
+
+        <div ng-if="!currentUser">
+            <ul class="nav navbar-nav">
+                <li ng-repeat="item in menu" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+                    <a href="/{{item.link}}">{{item.title}}</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="/signup">Sign up</a></li>
+                <li><a href="/login">Log In</a></li>
+            </ul>
+        </div>
+
     </nav>
 </div>

@@ -133,3 +133,33 @@ body{
     width: 50px;
     margin: -15px;
 }
+.content-container {
+    margin: 0 15px 0 0;
+    box-sizing: border-box;
+}
+
+#leftCol {
+    max-width: 300px;
+}
+
+.navbar-wrapper,
+.sidebar-wrapper{
+    background: #373838;
+}
+
+.navbar-wrapper .nav > li > a:hover,
+.navbar-wrapper .nav > li > a:focus,
+.sidebar-wrapper .nav > li > a:hover,
+.sidebar-wrapper .nav > li > a:focus{
+    background-color: green;
+}
+
+@media (max-width: 992px) {
+    #leftCol {
+        max-width: 100%;
+        padding: 0;
+    }
+    .content {
+        padding-left: 15px;
+    }
+}

@@ -3,13 +3,13 @@
 angular.module('angularPassportApp')
   .controller('NavbarCtrl', function ($scope, Auth, $location) {
     $scope.menu = [{
-      "title": "Blogs",
-      "link": "blogs"
+      "title": "Welcome to Volley",
+      "link": ""
     }];
 
     $scope.authMenu = [{
-      "title": "Create New Blog",
-      "link": "blogs/create"
+      "title": "Profile",
+      "link": "user:id"
     }];
 
     $scope.logout = function() {
