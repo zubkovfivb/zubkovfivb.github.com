@@ -1,0 +1,8 @@
+<section ng-init="loadUsers()" >
+    <h2>users</h2>
+    <div>
+        <p ng-repeat="user in users">
+            <a ng-href="/users/{{user.id}}">{{user.name}} - {{user.email}}</a>
+        </p>
+    </div>
+</section>
