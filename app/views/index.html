@@ -7,15 +7,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <base href="/"/>
-    <title></title>
+    <title>FIVB</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
     <!-- build:css(.tmp) styles/main.css -->
 
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="vendor/bower/bootstrap/dist/css/bootstrap.css">
     <!-- endbuild -->
 </head>
 <body ng-app="angularPassportApp">
@@ -24,22 +24,22 @@
 <![endif]-->
 
 <!--[if lt IE 9]>
-<script src="bower_components/es5-shim/es5-shim.js"></script>
-<script src="bower_components/json3/lib/json3.min.js"></script>
+<script src="vendor/bower/es5-shim/es5-shim.js"></script>
+<script src="vendor/bower/json3/lib/json3.min.js"></script>
 <![endif]-->
 
 <!-- Add your site or application content here -->
 <header class="navbar navbar-wrapper navbar-static-top"
         role="banner"
         ng-include=""
-        src="'partials/layouts/navbar.html'">
+        src="'views/navbar/navbar.html'">
 </header>
 <div class="content-container">
     <div class="row">
         <div class="col-md-3"
              id="leftCol"
              ng-include=""
-             src="'partials/layouts/sidebar.html'">
+             src="'views/sidebar/sidebar.html'">
         </div>
         <div class="content col-md-9">
             <div class="content"
@@ -60,33 +60,40 @@
     ga('send', 'pageview');
 </script>
 
-<script src="bower_components/angular/angular.js"></script>
+<script src="vendor/bower/angular/angular.js"></script>
 
 <!-- build:js(app) scripts/modules.js -->
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-<script src="bower_components/angular-http-auth/src/http-auth-interceptor.js"></script>
+<script src="vendor/bower/angular-resource/angular-resource.js"></script>
+<script src="vendor/bower/angular-cookies/angular-cookies.js"></script>
+<script src="vendor/bower/angular-sanitize/angular-sanitize.js"></script>
+<script src="vendor/bower/angular-route/angular-route.js"></script>
+<script src="vendor/bower/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script src="vendor/bower/angular-http-auth/src/http-auth-interceptor.js"></script>
 <!-- endbuild -->
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<script src="scripts/controllers/main.js"></script>
-<script src="scripts/controllers/login.js"></script>
-<script src="scripts/controllers/navbar.js"></script>
-<script src="scripts/controllers/sidebar.js"></script>
-<script src="scripts/controllers/signup.js"></script>
-<script src="scripts/controllers/blogs.js"></script>
-<script src="scripts/controllers/user.js"></script>
-<script src="scripts/directives/uniqueUsername.js"></script>
-<script src="scripts/services/Auth.js"></script>
-<script src="scripts/services/User.js"></script>
-<script src="scripts/directives/onFocus.js"></script>
-<script src="scripts/directives/mongooseError.js"></script>
-<script src="scripts/services/Session.js"></script>
-<script src="scripts/services/Blogs.js"></script>
+<script src="core/app.js"></script>
+<script src="core/config.js"></script>
+<script src="core/router.js"></script>
+<script src="core/interceptors.js"></script>
+
+<script src="views/navbar/navbar.js"></script>
+<script src="views/sidebar/sidebar.js"></script>
+
+<script src="pages/main/main.js"></script>
+<script src="pages/login/login.js"></script>
+<script src="pages/signup/signup.js"></script>
+<script src="pages/blogs/blogs.js"></script>
+<script src="pages/users/user.js"></script>
+
+<script src="directives/uniqueUsername.js"></script>
+<script src="directives/onFocus.js"></script>
+<script src="directives/mongooseError.js"></script>
+
+<script src="services/Auth.js"></script>
+<script src="services/User.js"></script>
+<script src="services/Session.js"></script>
+<script src="services/Blogs.js"></script>
 <!-- endbuild -->
 </body>
 </html>

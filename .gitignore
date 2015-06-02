@@ -2,8 +2,9 @@ node_modules
 public
 .tmp
 .sass-cache
-app/bower_components
+vendor
 heroku
 .idea
 /views
 /db
+npm-debug.log

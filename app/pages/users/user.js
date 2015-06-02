@@ -17,6 +17,4 @@ angular.module('angularPassportApp')
           $scope.user = user;
         });
       };
-
-//      $scope.loadUsers();
     });

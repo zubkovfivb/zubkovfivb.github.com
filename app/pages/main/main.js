@@ -1,5 +1,6 @@
 'use strict';
 
 angular.module('angularPassportApp')
-  .controller('MainCtrl', function ($scope) {
+  .controller('MainCtrl', function ($injector, $scope) {
+
   });
