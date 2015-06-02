@@ -1,9 +1,6 @@
 <div class="sidebar-wrapper" ng-controller="SidebarCtrl">
     <ul class="nav nav-stacked" id="sidebar">
-        <li ng-repeat="item in menu" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-            <a href="/{{item.link}}">{{item.title}}</a>
-        </li>
-        <li ng-repeat="item in authMenu" ng-show="currentUser" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+        <li ng-repeat="item in menu" ng-show="currentUser || !item.auth" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
             <a href="/{{item.link}}">{{item.title}}</a>
         </li>
     </ul>

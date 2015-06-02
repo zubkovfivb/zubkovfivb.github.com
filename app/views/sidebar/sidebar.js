@@ -1,18 +1,13 @@
 'use strict';
 
 angular.module('angularPassportApp')
-    .controller('SidebarCtrl', function ($scope, Auth, $location) {
-        $scope.menu = [{
-            "title": "Blogs",
-            "link": "blogs"
-        }];
+    .controller('SidebarCtrl', function ($injector, $scope, Auth, $location, $rootScope) {
+      var config = $injector.get('config');
 
-        $scope.authMenu = [{
-            "title": "Create New Blog",
-            "link": "blogs/create"
-        },{
-          "title": "Users list",
-          "link": "users"
-        }];
+      $scope.menu = config.menu;
+
+      $rootScope.$on('refreshData', function(){
+        console.log('work')
+      })
 
     });

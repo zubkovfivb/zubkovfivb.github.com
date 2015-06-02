@@ -1,6 +1,6 @@
 <div class="container" ng-controller="NavbarCtrl">
     <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse" ng-click="menuShow = !menuShow">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -11,30 +11,33 @@
         </a>
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
-        <div ng-if="currentUser">
-            <ul class="nav navbar-nav">
-                <li ng-repeat="item in authMenu" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-                    <a href="/{{item.link}}">{{item.title}}</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav pull-right">
-                <li>
-                    <a ng-click="logout()"><span class="glyphicon-log-out"></span> Logout</a>
-                </li>
-            </ul>
-        </div>
+        <ul ng-hide="menuShow" class="nav navbar-nav mobile-nav">
+            <li ng-repeat="item in menu" ng-if="currentUser || !item.auth" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
+                <a href="/{{item.link}}">{{item.title}}</a>
+            </li>
+            <li ng-if="!currentUser"><a href="/signup">Sign up</a></li>
+            <li ng-if="!currentUser"><a href="/login">Log In</a></li>
+            <li ng-if="currentUser">
+                <a ng-click="logout()"><span class="glyphicon-log-out"></span> Logout</a>
+            </li>
+        </ul>
 
-        <div ng-if="!currentUser">
-            <ul class="nav navbar-nav">
-                <li ng-repeat="item in menu" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-                    <a href="/{{item.link}}">{{item.title}}</a>
-                </li>
-            </ul>
-            <ul class="nav navbar-nav pull-right">
-                <li><a href="/signup">Sign up</a></li>
-                <li><a href="/login">Log In</a></li>
-            </ul>
-        </div>
+
+        <ul class="nav navbar-nav desktop-nav">
+            <li class="banner">
+                <a href="/">Welcome to awesome site</a>
+            </li>
+        </ul>
+
+
+        <ul ng-if="currentUser" class="nav navbar-nav pull-right desktop-nav">
+            <li><a ng-click="logout()"><span class="glyphicon-log-out"></span> Logout</a></li>
+        </ul>
+
+        <ul ng-if="!currentUser" class="nav navbar-nav pull-right desktop-nav">
+            <li><a href="/signup">Sign up</a></li>
+            <li><a href="/login">Log In</a></li>
+        </ul>
 
     </nav>
 </div>
